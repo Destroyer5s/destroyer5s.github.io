@@ -2,8 +2,8 @@
 title: Links
 links:
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
+    description: Projects.
+    website: https://github.com/Destroyer5s
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: Youtube
     description: Videos.
@@ -11,7 +11,7 @@ links:
     image: https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg?semt=ais_hybrid&w=740
   - title: Chess
     description: Chess.
-    website: https://www.youtube.com/@icepool
+    website: https://www.chess.com/member/adammmm09
     image: https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/w5tnbfiowkv7xe4lpoxy
   - title: Steam
     description: Gaming.
