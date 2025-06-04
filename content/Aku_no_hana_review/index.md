@@ -1,7 +1,7 @@
 ---
 title: The Manga that Broke Me.
 description: Review on the Manga of Aku No Hana
-slug: hello-world
+slug: aku-no-hana-review
 date: 2025-06-04 00:00:00+0000
 image: AkuCover.jpg
 categories:
