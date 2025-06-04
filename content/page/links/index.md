@@ -9,6 +9,14 @@ links:
     description: Videos.
     website: https://www.youtube.com/@icepool
     image: https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg?semt=ais_hybrid&w=740
+  - title: Chess
+    description: Chess.
+    website: https://www.youtube.com/@icepool
+    image: https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/w5tnbfiowkv7xe4lpoxy
+  - title: Steam
+    description: Gaming.
+    website: https://steamcommunity.com/id/destroyer5s/
+    image: https://b.thumbs.redditmedia.com/xvwxkNXOkvdu9d6S67odp1gCPfhB1A3qKDs7kdwO5ts.png
 menu:
     main: 
         weight: 4
