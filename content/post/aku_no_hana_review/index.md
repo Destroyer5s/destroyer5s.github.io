@@ -1,6 +1,6 @@
 ---
 title: The flowers of evil.
-description: Review on the Manga of Aku No Hana(The Flowers of Evil)
+description: Review on the Manga of 'Aku No Hana' by Shuzo Oshimi
 slug: aku-no-hana-review
 date: 2025-06-04 00:00:00+0000
 image: AkuCover.jpg
