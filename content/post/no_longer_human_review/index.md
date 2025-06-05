@@ -3,7 +3,7 @@ title: Who is Oba Yozo?
 description: Review on 'No Longer Human' by Osamu  Dazai
 slug: no_longer_human_review
 date: 2025-06-04 00:00:00+0000
-image: HumanCover.jpg
+image:
 categories:
     - Book
 tags:
