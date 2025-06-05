@@ -1,6 +1,6 @@
 ---
 title: self-reflection.
-description: Review on the Manga of Boku Wa Mari
+description: Review on the Manga of 'Boku Wa Mari' by Shuzo Oshimi
 slug: boku_wa_mari_review
 date: 2025-06-04 00:00:00+0000
 image: MariCover.jpg
