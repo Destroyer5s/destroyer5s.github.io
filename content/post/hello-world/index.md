@@ -2,7 +2,7 @@
 title: Welcome
 description: Welcome to my Blog!
 slug: welcome
-date: 2022-03-06 00:00:00+0000
+date: 2025-06-06 00:00:00+0000
 image:
 categories:
 tags:
