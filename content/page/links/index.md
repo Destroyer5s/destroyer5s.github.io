@@ -9,6 +9,10 @@ links:
     description: Videos.
     website: https://www.youtube.com/@icepool
     image: https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg?semt=ais_hybrid&w=740
+  - title: Instagram
+    description:
+    website: https://www.instagram.com/destroyer5s/
+    image: https://i.pinimg.com/736x/8a/3b/05/8a3b055d7e3cc52a0f0053535f0339ea.jpg
   - title: Chess
     description: Chess.
     website: https://www.chess.com/member/adammmm09
