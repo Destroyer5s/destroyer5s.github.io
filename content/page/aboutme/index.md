@@ -4,7 +4,6 @@ menu:
     main: 
         weight: 4
         params:
-            icon: archive
-
+            icon: aboutme
 comments: false
 ---
