@@ -4,6 +4,6 @@ menu:
     main: 
         weight: 7
         params:
-            icon: aboutme
+            icon: user
 comments: false
 ---
