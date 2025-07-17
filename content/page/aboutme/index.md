@@ -2,7 +2,7 @@
 title: About Me
 menu:
     main: 
-        weight: 100
+        weight: 1
         params:
             icon: aboutme
 comments: false
