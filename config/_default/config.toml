@@ -17,4 +17,4 @@ disqusShortname = "hugo-theme-stack"
 [pagination]
 pagerSize = 5
 
-disableKinds: ["taxonomy", "section"]
+disableKinds = [ "taxonomy", "section" ]
