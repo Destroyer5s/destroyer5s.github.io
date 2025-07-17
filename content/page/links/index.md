@@ -23,7 +23,7 @@ links:
     image: https://b.thumbs.redditmedia.com/xvwxkNXOkvdu9d6S67odp1gCPfhB1A3qKDs7kdwO5ts.png
 menu:
     main: 
-        weight: 4
+        weight: 1
         params:
             icon: link
 
