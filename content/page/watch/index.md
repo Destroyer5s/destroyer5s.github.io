@@ -9,7 +9,7 @@ comments: false
 license: false
 menu:
     main:
-        weight: -45
+        weight: 8
         params:
             icon: tag
 ---
