@@ -3,6 +3,24 @@ baseurl = "https://destroyer5s.github.io/"
 languageCode = "en-us"
 title = "Destroyer5s"
 
+languages:
+    en:
+        languageName: English
+        title: Destroyer5s
+        description:
+        weight: 1
+    zh-cn:
+        languageName: 中文
+        title: Destroyer5s
+        description: 演示说明
+        weight: 2
+    ar:
+        languageName: عربي
+        languagedirection: rtl
+        title: Destroyer5s
+        description: وصف تجريبي
+        weight: 
+
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
 defaultContentLanguage = "en"
