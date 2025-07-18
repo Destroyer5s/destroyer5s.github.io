@@ -5,14 +5,8 @@ languagedirection = "ltr"
 title = "Destroyer5s' blog"
 weight = 1
 
-[zh-cn]
-languageName = "中文"
+[fr]
+languageName = "Français"
 languagedirection = "ltr"
-title = "Destroyer5s' blog"
-weight = 3
-
-[ar]
-languageName = "عربي"
-languagedirection = "rtl"
 title = "Destroyer5s' blog"
 weight = 2
