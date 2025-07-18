@@ -9,10 +9,10 @@ weight = 1
 languageName = "中文"
 languagedirection = "ltr"
 title = "Destroyer5s' blog"
-weight = 2
+weight = 3
 
 [ar]
 languageName = "عربي"
 languagedirection = "rtl"
 title = "Destroyer5s' blog"
-weight = 3
+weight = 2
