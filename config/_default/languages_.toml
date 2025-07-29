@@ -4,9 +4,3 @@ languageName = "English"
 languagedirection = "ltr"
 title = "Destroyer5s' blog"
 weight = 1
-
-[fr]
-languageName = "Français"
-languagedirection = "ltr"
-title = "Destroyer5s' blog"
-weight = 2
