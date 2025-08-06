@@ -1,8 +1,7 @@
 ---
 title: Libary
 description: Books, Shows and Movies I have seen/read.
-slug: movies
-layout: movies
+slug: libary
 readingTime: false
 toc: false
 comments: false
