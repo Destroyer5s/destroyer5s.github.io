@@ -1,6 +1,6 @@
 ---
 title: Links
-readingtime: false
+readingTime: false
 menu:
     main: 
         weight: 4
