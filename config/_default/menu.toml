@@ -6,19 +6,3 @@
 #[main.params]
 #icon = "home"
 #newtab = true
-
-[[social]]
-identifier = ""
-name = ""
-url = ""
-
-[social.params]
-icon = ""
-
-[[social]]
-identifier = ""
-name = ""
-url = ""
-
-[social.params]
-icon = ""
