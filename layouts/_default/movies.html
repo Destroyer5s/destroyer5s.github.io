@@ -1,0 +1,274 @@
+{{ define "body-class" }}template-movies{{ end }}
+{{ define "main" }}
+    <header>
+        <h2 class="article-title">Movies Record</h2>
+    </header>
+
+    <!-- Movies Section -->
+    {{ $moviesData := .Site.Data.movies }}
+    {{ $currentYear := now.Format "2006" }}
+
+    {{ $sortedYears := slice }}
+    {{ range $year, $movies := $moviesData }}
+        {{ $sortedYears = $sortedYears | append $year }}
+    {{ end }}
+    {{ $sortedYears = sort $sortedYears "value" "desc" }}
+
+    {{ $latestYear := index $sortedYears 0 }}
+
+    <div class="year-buttons">
+        {{ range $sortedYears }}
+            <button class="year-btn{{ if eq . $latestYear }} active{{ end }}" data-year="{{ . }}">{{ . }}</button>
+        {{ end }}
+    </div>
+
+    {{ if $moviesData }}
+    <h3 class="section-title">Movies</h3>
+
+    {{ range $year, $movies := $moviesData }}
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="movies">
+            {{ range $movies }}
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        {{ if .cover }}
+                            <img src="{{ .cover }}" alt="{{ .title }}" loading="lazy">
+                        {{ else }}
+                            <div class="no-poster">No Poster Available</div>
+                        {{ end }}
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">{{ .title }} <span class="movie-year">{{ .year }}</span></h3>
+                        <div class="movie-meta">
+                            {{ if .rating }}
+                                <span class="rating">⭐ {{ printf "%.1f" .rating }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    {{ end }}
+
+    <!-- TV Shows Section -->
+    {{ $tvData := .Site.Data.shows }}
+    
+    {{ $tvSortedYears := slice }}
+    {{ range $year, $shows := $tvData }}
+        {{ $tvSortedYears = $tvSortedYears | append $year }}
+    {{ end }}
+
+    <h3 class="section-title">TV Shows</h3>
+
+    {{ range $year, $shows := $tvData }}
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="tv">
+            {{ range $shows }}
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        {{ if .cover }}
+                            <img src="{{ .cover }}" alt="{{ .title }}" loading="lazy">
+                        {{ else }}
+                            <div class="no-poster">No Poster Available</div>
+                        {{ end }}
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">{{ .title }} <span class="movie-year">{{ .year }}</span></h3>
+                        <div class="movie-meta">
+                            {{ if .rating }}
+                                <span class="rating">⭐ {{ printf "%.1f" .rating }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+
+    <!-- Books Section -->
+    {{ $booksData := .Site.Data.books }}
+    
+    {{ $bookSortedYears := slice }}
+    {{ range $year, $books := $booksData }}
+        {{ $bookSortedYears = $bookSortedYears | append $year }}
+    {{ end }}
+
+    <h3 class="section-title">Books</h3>
+
+    {{ range $year, $books := $booksData }}
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="books">
+            {{ range $books }}
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        {{ if .cover }}
+                            <img src="{{ .cover }}" alt="{{ .title }}" loading="lazy">
+                        {{ else }}
+                            <div class="no-poster">No Cover Available</div>
+                        {{ end }}
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">{{ .title }} <span class="movie-year">{{ .year }}</span></h3>
+                        <div class="movie-meta">
+                            {{ if .rating }}
+                                <span class="rating">⭐ {{ printf "%.1f" .rating }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+
+    <style>
+        .section-title {
+            margin: 0rem 0 0.5rem 0;  
+            font-size: 1.8rem;
+            color: var(--card-text-color-main);
+        }
+
+        .year-buttons {
+            margin: 0rem 0;
+            text-align: left;
+        }
+
+        .year-btn {
+            padding: 0.7rem 1.5rem;
+            margin: 0 0rem;
+            border: 2px solid var(--card-background);
+            background: transparent;
+            color: var(--card-text-color-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1.6rem;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .year-btn:hover {
+            opacity: 0.9;
+            border-color: var(--accent-color);
+        }
+
+        .year-btn.active {
+            background: var(--accent-color);
+            color: var(--accent-color-text);
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .movies-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1rem;
+            padding: 0rem 0; 
+        }
+        
+        @media (min-width: 768px) {
+            .movies-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1.2rem;
+            }
+        }
+        
+        .movies-grid.active {
+            display: grid;
+        }
+        
+        .movie-card {
+            background: var(--card-background);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .movie-poster {
+            position: relative;
+            padding-top: 130%;
+            background: #2a2a2a;
+        }
+        
+        .movie-poster img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .no-poster {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .movie-info {
+            padding: 0.8rem;
+        }
+        
+        .movie-title {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+            line-height: 1.3;
+            font-weight: 600;
+            color: var(--card-text-color-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .movie-year {
+            font-size: 1.2rem;
+            color: var(--card-text-color-secondary);
+            font-weight: 600;
+        }
+        
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            color: var(--card-text-color-secondary);
+        }
+
+        .rating {
+            font-weight: 500;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearButtons = document.querySelectorAll('.year-btn');
+            const grids = document.querySelectorAll('.movies-grid');
+
+            yearButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const year = this.dataset.year;
+                    
+                    // Remove active class from all buttons
+                    yearButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Remove active class from all grids
+                    grids.forEach(grid => grid.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Add active class to all corresponding grids with matching year
+                    document.querySelectorAll(`.movies-grid[data-year="${year}"]`).forEach(grid => {
+                        grid.classList.add('active');
+                    });
+                });
+            });
+        });
+    </script>
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}
