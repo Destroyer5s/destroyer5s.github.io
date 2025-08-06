@@ -6,8 +6,8 @@ links:
     website: https://github.com
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
     links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
+  - title: instagram
+    description:
     website: https://github.com
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: TypeScript
