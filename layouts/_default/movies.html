@@ -1,15 +1,15 @@
-{{ define "body-class" }}template-libary{{ end }}
+{{ define "body-class" }}template-movies{{ end }}
 {{ define "main" }}
     <header>
-        <h2 class="article-title">libary Record</h2>
+        <h2 class="article-title">Movies Record</h2>
     </header>
 
-    <!-- libary Section -->
-    {{ $libaryData := .Site.Data.libary }}
+    <!-- Movies Section -->
+    {{ $moviesData := .Site.Data.movies }}
     {{ $currentYear := now.Format "2006" }}
 
     {{ $sortedYears := slice }}
-    {{ range $year, $libary := $libaryData }}
+    {{ range $year, $movies := $moviesData }}
         {{ $sortedYears = $sortedYears | append $year }}
     {{ end }}
     {{ $sortedYears = sort $sortedYears "value" "desc" }}
@@ -22,12 +22,12 @@
         {{ end }}
     </div>
 
-    {{ if $libaryData }}
-    <h3 class="section-title">libary</h3>
+    {{ if $moviesData }}
+    <h3 class="section-title">Movies</h3>
 
-    {{ range $year, $libary := $libaryData }}
-        <div class="libary-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="libary">
-            {{ range $libary }}
+    {{ range $year, $movies := $moviesData }}
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="movies">
+            {{ range $movies }}
                 <div class="movie-card">
                     <div class="movie-poster">
                         {{ if .cover }}
@@ -61,7 +61,7 @@
     <h3 class="section-title">TV Shows</h3>
 
     {{ range $year, $shows := $tvData }}
-        <div class="libary-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="tv">
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="tv">
             {{ range $shows }}
                 <div class="movie-card">
                     <div class="movie-poster">
@@ -95,7 +95,7 @@
     <h3 class="section-title">Books</h3>
 
     {{ range $year, $books := $booksData }}
-        <div class="libary-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="books">
+        <div class="movies-grid{{ if eq $year $latestYear }} active{{ end }}" data-year="{{ $year }}" data-type="books">
             {{ range $books }}
                 <div class="movie-card">
                     <div class="movie-poster">
@@ -156,7 +156,7 @@
             opacity: 1;
         }
 
-        .libary-grid {
+        .movies-grid {
             display: none;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
@@ -164,13 +164,13 @@
         }
         
         @media (min-width: 768px) {
-            .libary-grid {
+            .movies-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 gap: 1.2rem;
             }
         }
         
-        .libary-grid.active {
+        .movies-grid.active {
             display: grid;
         }
         
@@ -246,7 +246,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const yearButtons = document.querySelectorAll('.year-btn');
-            const grids = document.querySelectorAll('.libary-grid');
+            const grids = document.querySelectorAll('.movies-grid');
 
             yearButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -262,7 +262,7 @@
                     this.classList.add('active');
                     
                     // Add active class to all corresponding grids with matching year
-                    document.querySelectorAll(`.libary-grid[data-year="${year}"]`).forEach(grid => {
+                    document.querySelectorAll(`.movies-grid[data-year="${year}"]`).forEach(grid => {
                         grid.classList.add('active');
                     });
                 });
