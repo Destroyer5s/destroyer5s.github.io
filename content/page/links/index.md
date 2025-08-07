@@ -10,10 +10,10 @@ links:
   - title: GitHub
     description:
     website: https://github.com/Destroyer5s
-    image: github.svg
+    image: github
   - title: instagram
     description:
     website: https://www.instagram.com/destroyer5s/
-    image: instagram.svg
+    image: instagram
 comments: false
 ---
