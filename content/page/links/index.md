@@ -8,17 +8,12 @@ menu:
             icon: link
 links:
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-    links:
+    description:
+    website: https://github.com/Destroyer5s
+    image: github.svg
   - title: instagram
     description:
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+    website: https://www.instagram.com/destroyer5s/
+    image: instagram.svg
 comments: false
 ---
