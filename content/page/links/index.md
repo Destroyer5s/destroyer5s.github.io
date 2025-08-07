@@ -1,5 +1,5 @@
 ---
-title: About me & Links
+title: Links
 readingTime: false
 menu:
     main: 
