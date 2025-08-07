@@ -14,6 +14,6 @@ links:
   - title: instagram
     description:
     website: https://www.instagram.com/destroyer5s/
-    image: instagram
+    image: https://cdn.freebiesupply.com/images/large/2x/instagram-logo-black-transparent.png
 comments: false
 ---
