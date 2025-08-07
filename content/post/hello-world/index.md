@@ -4,7 +4,8 @@ description: my first post.
 slug: hello-world
 date: 2022-03-06 00:00:00+0000
 categories:
-    - Post
+    - post
+    - featured
 tags:
 weight: 1 
 ---
