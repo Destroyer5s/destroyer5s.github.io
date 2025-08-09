@@ -2,7 +2,7 @@
 title: Hello World
 description: my first post.
 slug: hello-world
-date: 2022-03-06 00:00:00+0000
+date: 2025-08-07 00:00:00+0000
 categories:
     - post
     - featured
