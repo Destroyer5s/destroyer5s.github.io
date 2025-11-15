@@ -2,7 +2,7 @@
 title: i love ajikan
 description: ajikan music
 slug: ajikanlove
-date: 2025-11-08 00:00:00+0000
+date: 2025-11-15 00:00:00+0000
 categories:
     - post
     - featured
