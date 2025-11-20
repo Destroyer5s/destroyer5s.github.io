@@ -11,9 +11,4 @@ links:
     description:
     website: https://github.com/aaaadammmm
     image: https://cdn-icons-png.flaticon.com/512/25/25231.png
-  - title: instagram
-    description:
-    website: https://www.instagram.com/adam0004135/
-    image: https://cdn.freebiesupply.com/images/large/2x/instagram-logo-black-transparent.png
-comments: false
 ---
