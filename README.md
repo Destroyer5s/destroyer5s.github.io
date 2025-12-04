@@ -1,6 +1,6 @@
 All the files to my blog, here is the link of the blog if you are intrested
 
-https://destroyer5s.github.io/
+https://aaaadammmm.github.io/
 
 If you are intrested in making your own blog or website with the same template, head to 
 
